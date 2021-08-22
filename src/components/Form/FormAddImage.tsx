@@ -88,15 +88,15 @@ export function FormAddImage({ closeModal }: FormAddImageProps): JSX.Element {
       }
       await mutation.mutateAsync(data);
       toast({
-        status: 'success',
         title: 'Imagem cadastrada',
         description: 'Sua imagem foi cadastrada com sucesso.',
+        status: 'success',
       });
     } catch {
       toast({
-        status: 'error',
         title: 'Falha no cadastro',
-        description: 'Ocorreu um erro ao tentar cadastrar sua imagem.',
+        description: 'Ocorreu um erro ao tentar cadastrar a sua imagem.',
+        status: 'error',
       });
     } finally {
       reset();
